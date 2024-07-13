@@ -39,7 +39,11 @@ func stringifyValue(value reflect.Value, depth int) string {
 		lines := make([]string, 0)
 		lines = append(lines, "{")
 		for _, key := range value.MapKeys() {
-			lines = append(lines, fmt.Sprintf("%s%s: %s", strings.Repeat(Indent, depth+1), key, stringifyValue(value.MapIndex(key), depth+1)))
+			lines = append(lines, fmt.Sprintf(
+				"%s%s: %s", strings.Repeat(Indent, depth+1),
+				key,
+				stringifyValue(reflect.ValueOf(value.MapIndex(key).Interface()), depth+1),
+			))
 		}
 		lines = append(lines, fmt.Sprintf("%s}", strings.Repeat(Indent, depth)))
 		return strings.Join(lines, "\n")
