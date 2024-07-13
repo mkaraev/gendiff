@@ -1,0 +1,98 @@
+{
+    "common": {
+        "type": "Nested",
+        "value": {
+            "follow": {
+                "type": "Added",
+                "value": false
+            },
+            "setting1": {
+                "type": "Unchanged",
+                "value": "Value 1"
+            },
+            "setting2": {
+                "type": "Removed",
+                "value": 200
+            },
+            "setting3": {
+                "new": null,
+                "old": true,
+                "type": "Changed"
+            },
+            "setting4": {
+                "type": "Added",
+                "value": "blah blah"
+            },
+            "setting5": {
+                "type": "Added",
+                "value": {
+                    "key5": "value5"
+                }
+            },
+            "setting6": {
+                "type": "Nested",
+                "value": {
+                    "doge": {
+                        "type": "Nested",
+                        "value": {
+                            "wow": {
+                                "new": "so much",
+                                "old": "",
+                                "type": "Changed"
+                            }
+                        }
+                    },
+                    "key": {
+                        "type": "Unchanged",
+                        "value": "value"
+                    },
+                    "ops": {
+                        "type": "Added",
+                        "value": "vops"
+                    }
+                }
+            }
+        }
+    },
+    "group1": {
+        "type": "Nested",
+        "value": {
+            "baz": {
+                "new": "bars",
+                "old": "bas",
+                "type": "Changed"
+            },
+            "foo": {
+                "type": "Unchanged",
+                "value": "bar"
+            },
+            "nest": {
+                "new": "str",
+                "old": {
+                    "key": "value"
+                },
+                "type": "Changed"
+            }
+        }
+    },
+    "group2": {
+        "type": "Removed",
+        "value": {
+            "abc": 12345,
+            "deep": {
+                "id": 45
+            }
+        }
+    },
+    "group3": {
+        "type": "Added",
+        "value": {
+            "deep": {
+                "id": {
+                    "number": 45
+                }
+            },
+            "fee": 100500
+        }
+    }
+}

@@ -9,7 +9,7 @@ import (
 	output_format "gendiff/pkg/format"
 	"gendiff/pkg/types"
 
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 )
 
 func GenerateDiff(firstFilePath string, secondFilePath string, format string) (string, error) {
@@ -36,7 +36,7 @@ func GenerateDiff(firstFilePath string, secondFilePath string, format string) (s
 	return output_format.Format(diff, format)
 }
 
-func Parse(r io.Reader, format string) (types.AnyDict, error) {
+func Parse(r io.Reader, format string) (types.Dict, error) {
 	type Decoder interface {
 		Decode(v interface{}) error
 	}
@@ -55,5 +55,5 @@ func Parse(r io.Reader, format string) (types.AnyDict, error) {
 		return nil, err
 	}
 
-	return types.AnyDict(data), nil
+	return types.Dict(data), nil
 }

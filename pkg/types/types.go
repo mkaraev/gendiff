@@ -1,24 +1,32 @@
 package types
 
+import "slices"
+
 const (
-	Removed = iota
-	Added
-	Changed
-	Unchanged
-	Nested
+	Removed   = "Removed"
+	Added     = "Added"
+	Changed   = "Changed"
+	Unchanged = "Unchanged"
+	Nested    = "Nested"
 )
 
-type AnyDict map[string]interface{}
+type Dict map[string]interface{}
 
-func (d AnyDict) Keys() []string {
+func (d Dict) Keys() []string {
 	keys := make([]string, 0)
 	for key := range d {
 		keys = append(keys, key)
 	}
+	slices.Sort(keys)
 	return keys
 }
 
-func (d AnyDict) HasKey(key string) bool {
+func (d Dict) HasKey(key string) bool {
 	_, ok := d[key]
 	return ok
+}
+
+func ToDict(v interface{}) Dict {
+	rawValue := v.(map[string]interface{})
+	return Dict(rawValue)
 }
