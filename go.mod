@@ -1,4 +1,4 @@
-module gendiff
+module github.com/mkaraev/gendiff
 
 go 1.22.4
 
