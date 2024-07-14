@@ -10,7 +10,7 @@ import (
 func main() {
 	var format string
 	cmd := &cobra.Command{
-		Use:   "gendiff [-h] [-f FORMAT] first_file second_file",
+		Use:   "gendiff first_file second_file",
 		Short: "Compares two configuration files and shows a difference.",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) < 2 {
@@ -24,7 +24,7 @@ func main() {
 			return nil
 		},
 	}
-	cmd.Flags().StringVarP(&format, "format", "f", "stylish", "set format of output")
+	cmd.Flags().StringVarP(&format, "format", "f", "stylish", "set format of output: plain, json, stylish")
 	if err := cmd.Execute(); err != nil {
 		fmt.Println(fmt.Errorf("error in gendiff: %v", err))
 	}
