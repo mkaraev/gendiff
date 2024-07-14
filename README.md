@@ -9,7 +9,7 @@ This project is given to students as a learning project in the [Hexlet](https://
 
 If you want to use it in your go projects:
 ```
-go get github.com/mkaraev/gendiff-golang@v0.1.0
+go get github.com/mkaraev/gendiff@v0.1.0
 ```
 
 If you want to use it as command line tool:
