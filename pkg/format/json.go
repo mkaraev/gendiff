@@ -2,7 +2,7 @@ package format
 
 import (
 	"encoding/json"
-	"gendiff/pkg/types"
+	"github.com/mkaraev/gendiff/pkg/types"
 )
 
 func Json(diff types.Dict) string {

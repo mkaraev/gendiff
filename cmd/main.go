@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"gendiff/pkg/gendiff"
+	"github.com/mkaraev/gendiff/pkg/gendiff"
 	"github.com/spf13/cobra"
 )
 

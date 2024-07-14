@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gendiff/pkg/types"
+	"github.com/mkaraev/gendiff/pkg/types"
 )
 
 var Marks = map[string]string{

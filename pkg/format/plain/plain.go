@@ -2,7 +2,7 @@ package plain
 
 import (
 	"fmt"
-	"gendiff/pkg/types"
+	"github.com/mkaraev/gendiff/pkg/types"
 	"reflect"
 	"strconv"
 	"strings"

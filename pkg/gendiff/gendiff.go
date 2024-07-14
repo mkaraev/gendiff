@@ -6,8 +6,8 @@ import (
 	"os"
 	"path"
 
-	output_format "gendiff/pkg/format"
-	"gendiff/pkg/types"
+	output_format "github.com/mkaraev/gendiff/pkg/format"
+	"github.com/mkaraev/gendiff/pkg/types"
 
 	"gopkg.in/yaml.v3"
 )

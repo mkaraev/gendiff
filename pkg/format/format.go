@@ -3,9 +3,9 @@ package format
 import (
 	"fmt"
 
-	"gendiff/pkg/format/plain"
-	"gendiff/pkg/format/stylish"
-	"gendiff/pkg/types"
+	"github.com/mkaraev/gendiff/pkg/format/plain"
+	"github.com/mkaraev/gendiff/pkg/format/stylish"
+	"github.com/mkaraev/gendiff/pkg/types"
 )
 
 type Formatter func(diff types.Dict) string

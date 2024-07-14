@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"slices"
 
-	"gendiff/pkg/types"
+	"github.com/mkaraev/gendiff/pkg/types"
 )
 
 func BuildDiffTree(before, after types.Dict) types.Dict {

@@ -2,7 +2,7 @@ package tests
 
 import (
 	"fmt"
-	"gendiff/pkg/gendiff"
+	"github.com/mkaraev/gendiff/pkg/gendiff"
 	"os"
 	"path/filepath"
 	"testing"
