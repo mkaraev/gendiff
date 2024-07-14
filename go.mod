@@ -2,7 +2,7 @@ module gendiff
 
 go 1.22.4
 
-replace github.com/mkaraev/gendiff-golang v0.1.0 => github.com/mkaraev/gendiff v0.1.0
+replace github.com/mkaraev/gendiff v0.1.0 => github.com/mkaraev/gendiff-golang v0.1.0
 
 require (
 	github.com/spf13/cobra v1.8.1
