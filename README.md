@@ -8,7 +8,7 @@ This project is given to students as a learning project in the [Hexlet](https://
 ### Installation
 
 ```
-go get github.com/mkaraev/gendiff-golang@0.1.0
+go get github.com/mkaraev/gendiff-golang@v0.1.0
 ```
 
 
