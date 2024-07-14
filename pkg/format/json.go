@@ -6,6 +6,6 @@ import (
 )
 
 func Json(diff types.Dict) string {
-	data, _ := json.Marshal(diff)
+	data, _ := json.MarshalIndent(diff, "", "\t")
 	return string(data)
 }

@@ -8,6 +8,10 @@ import (
 	"strings"
 )
 
+func quote(s string) string {
+	return "'" + s + "'"
+}
+
 func stringifyValue(value reflect.Value) string {
 	switch value.Kind() {
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
@@ -19,11 +23,11 @@ func stringifyValue(value reflect.Value) string {
 	case reflect.Bool:
 		return strconv.FormatBool(value.Bool())
 	case reflect.String:
-		return strconv.Quote(value.String())
+		return quote(value.String())
 	case reflect.Array, reflect.Slice, reflect.Map:
 		return "[complex value]"
 	}
-	return ""
+	return "null"
 }
 
 func stringifyNode(keyPath string, rawNode interface{}) string {
@@ -33,12 +37,12 @@ func stringifyNode(keyPath string, rawNode interface{}) string {
 	case types.Changed:
 		oldValue := stringifyValue(reflect.ValueOf(node["old"]))
 		newValue := stringifyValue(reflect.ValueOf(node["new"]))
-		return fmt.Sprintf("Property %s was updated. From %s to %s", keyPath, oldValue, newValue)
+		return fmt.Sprintf("Property '%s' was updated. From %s to %s", keyPath, oldValue, newValue)
 	case types.Added:
 		value := stringifyValue(reflect.ValueOf(node["value"]))
-		return fmt.Sprintf("Property %s was added with value: %s", keyPath, value)
+		return fmt.Sprintf("Property '%s' was added with value: %s", keyPath, value)
 	case types.Removed:
-		return fmt.Sprintf("Property %s was removed", keyPath)
+		return fmt.Sprintf("Property '%s' was removed", keyPath)
 	case types.Unchanged:
 		return ""
 	case types.Nested:

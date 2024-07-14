@@ -1,0 +1,35 @@
+{
+	"common": {
+		"type": "Removed",
+		"value": {
+			"setting1": "Value 1",
+			"setting2": 200,
+			"setting3": true,
+			"setting6": {
+				"doge": {
+					"wow": ""
+				},
+				"key": "value"
+			}
+		}
+	},
+	"group1": {
+		"type": "Removed",
+		"value": {
+			"baz": "bas",
+			"foo": "bar",
+			"nest": {
+				"key": "value"
+			}
+		}
+	},
+	"group2": {
+		"type": "Removed",
+		"value": {
+			"abc": 12345,
+			"deep": {
+				"id": 45
+			}
+		}
+	}
+}

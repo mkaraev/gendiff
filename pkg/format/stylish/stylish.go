@@ -48,7 +48,7 @@ func stringifyValue(value reflect.Value, depth int) string {
 		lines = append(lines, fmt.Sprintf("%s}", strings.Repeat(Indent, depth)))
 		return strings.Join(lines, "\n")
 	}
-	return ""
+	return "null"
 }
 
 func stringifyNode(key string, rawNode interface{}, depth int) string {

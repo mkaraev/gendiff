@@ -51,7 +51,7 @@ func Parse(r io.Reader, format string) (types.Dict, error) {
 		decoder = yaml.NewDecoder(r)
 	}
 
-	if err := decoder.Decode(&data); err != nil {
+	if err := decoder.Decode(&data); err != nil && err != io.EOF {
 		return nil, err
 	}
 
