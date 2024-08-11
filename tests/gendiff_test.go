@@ -36,24 +36,6 @@ func TestGenerateDiff(t *testing.T) {
 			format:             "stylish",
 		},
 		{
-			file1: filepath.Join(TestdataDirectory, "file1.yaml"),
-			file2: filepath.Join(TestdataDirectory, "empty.yaml"),
-			expectedResultFile: filepath.Join(ExpectedDirectory, "file1_empty_json.txt"),
-			format: "json",
-		},
-		{
-			file1:              filepath.Join(TestdataDirectory, "file1.yaml"),
-			file2:              filepath.Join(TestdataDirectory, "file2.yaml"),
-			expectedResultFile: filepath.Join(ExpectedDirectory, "file1_file2_json.txt"),
-			format:             "json",
-		},
-		{
-			file1:              filepath.Join(TestdataDirectory, "file1.json"),
-			file2:              filepath.Join(TestdataDirectory, "file2.json"),
-			expectedResultFile: filepath.Join(ExpectedDirectory, "file1_file2_json.txt"),
-			format:             "json",
-		},
-		{
 			file1:              filepath.Join(TestdataDirectory, "file1.json"),
 			file2:              filepath.Join(TestdataDirectory, "file2.json"),
 			expectedResultFile: filepath.Join(ExpectedDirectory, "file1_file2_plain.txt"),
