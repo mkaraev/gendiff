@@ -7,12 +7,12 @@ This project is given to students as a learning project in the [Hexlet](https://
 
 ### Installation
 
-If you want to use it in your go projects:
+If you want to use it in your Go projects:
 ```
 go get github.com/mkaraev/gendiff@v0.1.0
 ```
 
-If you want to use it as command line tool:
+If you want to use it as command-line tool:
 ```
 git clone git@github.com:mkaraev/gendiff.git
 cd gendiff/
@@ -23,7 +23,7 @@ make build
 
 ### Usage
 ```
-Compares two configuration files and shows a difference.
+Compares two configuration files and shows the difference.
 
 Usage:
   gendiff [-h] [-f FORMAT] first_file second_file [flags]
